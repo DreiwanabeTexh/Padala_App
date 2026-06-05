@@ -250,7 +250,7 @@ class _PosterState extends State<Poster> {
                       ]
                     )
                   ),
-                  SizedBox(height: 55,),
+                  SizedBox(height: 85,),
                 ],),
               ),
             ),

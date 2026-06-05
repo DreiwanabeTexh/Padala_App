@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:padala_app/service/widget_support.dart';
+import 'package:padala_app/pages/order.dart';
+import 'package:padala_app/pages/profile.dart';
+import 'package:padala_app/pages/poster.dart';
+import 'package:padala_app/pages/bottomnavbar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -86,7 +90,7 @@ class _HomeState extends State<Home> {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      color: Color(0XFFB2C9AD),
+                      color:  Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Color.fromARGB(255, 0, 0, 0), width: 1.5)
                     ),
@@ -125,7 +129,7 @@ class _HomeState extends State<Home> {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      color: Color(0XFFB2C9AD),
+                      color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Color.fromARGB(255, 0, 0, 0), width: 1.5)
                     ),
@@ -156,7 +160,7 @@ class _HomeState extends State<Home> {
                 )
               ),
         
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: Material(
@@ -165,7 +169,7 @@ class _HomeState extends State<Home> {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      color: Color(0XFFB2C9AD),
+                      color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Color.fromARGB(255, 0, 0, 0), width: 1.5)
                     ),
@@ -194,7 +198,7 @@ class _HomeState extends State<Home> {
                   
                 )
               ), 
-              SizedBox(height: 30,),
+              SizedBox(height: 90,),
               
             ],
             

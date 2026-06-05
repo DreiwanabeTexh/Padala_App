@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943686387666",
+    "project_id": "packagedeliveryapp-3909c",
+    "storage_bucket": "packagedeliveryapp-3909c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943686387666:android:94c48cc0c059be3930aa0b",
+        "android_client_info": {
+          "package_name": "com.example.padala_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAig2BpUM10oCG0ltUecKkH6R1ru1rwIA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
