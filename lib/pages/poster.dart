@@ -19,6 +19,7 @@ class _PosterState extends State<Poster> {
           Center(child: Text("Add Package", style: AppWidget.WhiteHeadlineTextStyle(20.0), textAlign: TextAlign.center,)),
           SizedBox(height: 30,),  
           Expanded(
+            
             child: Container(
               padding:EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(

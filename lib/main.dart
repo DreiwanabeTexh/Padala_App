@@ -4,6 +4,7 @@ import 'package:padala_app/pages/home.dart';
 import 'package:padala_app/pages/poster.dart';
 import 'package:padala_app/pages/bottomnavbar.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:padala_app/pages/getstarted.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 78, 77, 80)),
       ),
-      home: BottomNavBar()
+      home: GetStarted()
     );
   }
 }
