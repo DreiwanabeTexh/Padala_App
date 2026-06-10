@@ -23,7 +23,7 @@ class _GetStartedState extends State<GetStarted> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 3), (timer){
+    _timer = Timer.periodic(Duration(seconds: 5), (timer){
       if(_currentPage != _pages.length - 1){
         _currentPage++;
       }else{
@@ -34,11 +34,11 @@ class _GetStartedState extends State<GetStarted> {
   }
 
     @override
-void dispose() {
-  _timer.cancel();
-  _pagecontroller.dispose();
-  super.dispose();
-}
+    void dispose() {
+      _timer.cancel();
+      _pagecontroller.dispose();
+      super.dispose();
+    }
 
 
   @override
