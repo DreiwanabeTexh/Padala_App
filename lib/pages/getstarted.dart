@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:padala_app/service/widget_support.dart';
 import 'dart:async';
+import 'package:padala_app/pages/signin.dart';
 
 class GetStarted extends StatefulWidget {
+
   const GetStarted({super.key});
 
   @override
   State<GetStarted> createState() => _GetStartedState();
 }
 
-class _GetStartedState extends State<GetStarted> {
+class _GetStartedState extends State<GetStarted> with TickerProviderStateMixin {
 
   final PageController _pagecontroller = PageController();
   int _currentPage = 0;
@@ -20,9 +22,17 @@ class _GetStartedState extends State<GetStarted> {
     "assets/images/tryt3.png",
   ];
 
+  late AnimationController _animationController;
+
   @override
   void initState() {
     super.initState();
+
+  _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 800),
+    );
+
     _timer = Timer.periodic(Duration(seconds: 5), (timer){
       if(_currentPage != _pages.length - 1){
         _currentPage++;
@@ -37,6 +47,7 @@ class _GetStartedState extends State<GetStarted> {
     void dispose() {
       _timer.cancel();
       _pagecontroller.dispose();
+      _animationController.dispose();
       super.dispose();
     }
 
@@ -104,7 +115,15 @@ class _GetStartedState extends State<GetStarted> {
                       width: 320,
                       height: 60,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _animationController.reset();
+                            showModalBottomSheet(
+                              context: context, 
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (context) => createaAccount(isLogin: true),
+                            );
+                          },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF2D5A27),
                           padding: EdgeInsets.symmetric(vertical: 15),
@@ -120,7 +139,15 @@ class _GetStartedState extends State<GetStarted> {
                       width: 320,
                       height: 60,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _animationController.reset();
+                            showModalBottomSheet(
+                              context: context, 
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              builder: (context) => createaAccount(isLogin: false),
+                            );
+                          },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromARGB(255, 253, 253, 253),
                           padding: EdgeInsets.symmetric(vertical: 15),

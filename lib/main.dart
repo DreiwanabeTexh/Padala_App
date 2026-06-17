@@ -38,9 +38,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 78, 77, 80)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 78, 77, 80)),
       ),
-      home: createaAccount()
+      home: GetStarted(),
+      routes: {
+        '/home': (context) => BottomNavBar(),
+        '/login': (context) => createaAccount(),
+        
+      },
     );
   }
 }
